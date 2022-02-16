@@ -1,0 +1,58 @@
+                                                                     HTML
+
+<html>
+  <head>
+  <title>ex1</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <td>h</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+                                                                       JS
+
+function h(){
+var tab=new Array(8,12,9,12,17,18,15,13);
+let S=0;
+  for (let i=0;i<tab.length;i++)
+    {
+      if tab[i]>10
+      S=S+1;
+    }
+  var som=0;
+  for (let j=0;j<tab.length;j++)
+ {
+   som=som+tab[j];
+ } 
+  var moy=som/tab.length;
+  document.write("nombre de notes supérieurs à 10:"+S);
+  document.write("moyenne des notes:"+som);
+  
+  for (i=0;i<tab.length;i++)
+    {
+      for (j=tab.length;j>0;j--)
+        {
+          if (tab[i]>tab[j])
+            {
+              let aux=tab[i];
+              tab[i]=tab[j];
+              tab[j]=aux;
+            }
+        }
+    }
+   for (i=0;i<tab.length;i++)
+     {
+       console.log(tab[i]);
+     }
+}
